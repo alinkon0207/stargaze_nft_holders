@@ -56,7 +56,7 @@ function App() {
           <input type="text" id="contractAddr" style={{width: '600px', marginBottom: '20px'}} placeholder="Please input your contract address" value={contractAddr} onChange={(e) => setContractAddr(e.target.value)} />
         </div>
         <input type="button" value="Get holders list" style={{width: '200px', marginBottom: '20px'}} onClick={updateHoldersList} />
-        <textarea id="holdersList" value={holdersList} readonly style={{width: '800px', height: '800px'}} />
+        <textarea id="holdersList" value={holdersList} readonly style={{width: '600px', height: '800px'}} />
       </header>
     </div>
   );
