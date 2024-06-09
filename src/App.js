@@ -18,10 +18,10 @@ function App() {
     const client = await CosmWasmClient.connect(rpcEndpoint);
 
     let query = { num_tokens: {} };
-    const numTokens = (await client.queryContractSmart(contractAddr, query)).count;
-    let owners = `number of tokens: ${numTokens}\r\n`;
+    const numNfts = (await client.queryContractSmart(contractAddr, query)).count;
+    let owners = `Number of NFTs: ${numNfts}\r\n`;
 
-    for (let i = 0; i < numTokens; i++) {
+    for (let i = 0; i < numNfts; i++) {
         try {
             query = { owner_of: {token_id: `${i + 1}`} };
             const owner = (await client.queryContractSmart(contractAddr, query)).owner;
