@@ -1,9 +1,8 @@
+// import logo from './logo.svg';
+import './App.css';
 
 import React, { useState } from "react";
 const { CosmWasmClient } = require("@cosmjs/cosmwasm-stargate");
-
-import logo from './logo.svg';
-import './App.css';
 
 
 const rpcEndpoint = "https://rpc.stargaze-apis.com";
@@ -15,7 +14,7 @@ function App() {
 
   const updateHoldersList = async () => {
     if (contractAddr === "") return;
-    
+
     const client = await CosmWasmClient.connect(rpcEndpoint);
 
     let query = { num_tokens: {} };
